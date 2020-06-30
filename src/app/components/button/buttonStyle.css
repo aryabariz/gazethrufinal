@@ -1,0 +1,19 @@
+.dasarButton{
+    width: 15vw;
+    height: 6vh;
+}
+
+.fontButton{
+    font-style: normal;
+    font-weight: bold;
+    color : #fff;
+    font-size: 15px;
+     
+}
+@media screen and (min-width: 1920px) {
+    .fontButton {
+      font-size: 22px
+    }
+  }
+
+  

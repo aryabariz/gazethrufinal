@@ -1,0 +1,105 @@
+.bawah{
+    position: absolute;
+    width: 100vw;
+    height: 75.18vh;
+    top:24.82%;
+}
+
+.gmbrInformasi{
+    position: relative;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 27.03vw;
+    margin-top: 2.13vh;
+    margin-bottom: auto;
+}
+
+.locBlt1{
+    position: absolute;
+    top: 4.61%;
+    left: 11.25%;
+}
+
+.locBlt2{
+    position: absolute;
+    bottom: 11.82%;
+    right: 26.87%;
+}
+
+.locBlt3{
+    position: absolute;
+    bottom: 21.6%;
+    right: 11.87%;
+}
+
+.gmbrHal{
+    position: absolute;
+    left: 18.12%;
+    top: 10.46%;
+    width: 27.03vw;
+    display: block;
+}
+
+.locBKebawah{
+    position:absolute;
+    top: 34.13%;
+    right: 17.81%;
+}
+
+.locBKeatas{
+    position:absolute;
+    top: 25.10%;
+    right:17.81%;
+}
+
+.areaKeterangan{
+    position: absolute;
+    width: 50.07vw;
+    height: 12.66vh;
+    left: 6.48%;
+    bottom: 16%;
+    background: #FDCE3F;
+}
+
+.judulKeterangan{
+    position:absolute;
+    top:23.02%;
+    left:3.58%;
+    color: #4a4a4a;
+    font-style:normal;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.isiKeterangan{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #053F5E;
+    height : auto;
+    width: 891px;
+    position: absolute;
+    top: 38.37%;
+    left: 3.58%;
+}
+
+.videoHal{
+    position:absolute;
+    width: 33.90vw;
+    height: auto;
+    top: 10.46%;
+    left: 14.68%;
+}
+
+
+@media screen and (min-width: 1900px) {
+    .judulKeterangan{
+        font-size:18px;
+    }
+
+    .isiKeterangan{
+        font-size: 22px;
+    }
+
+  }

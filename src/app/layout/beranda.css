@@ -1,0 +1,114 @@
+.posisiPoster{
+    position: absolute;
+    left: 6.56%;
+    top: 11.38%;
+}
+
+.zonaDua{
+    position: absolute;
+    width: 57.03vw;
+    height: 79.44vh;
+    right: 0%;
+    top: 12.93%;
+}
+
+.lokasiBInformasi{
+    position: absolute;
+    top: 54.72%;
+}
+
+.lokasiBPeta{
+    position: absolute;
+    top: 68.7%;
+    right: 12.19%;
+}
+
+.lokasiTerkini {
+    position: absolute;
+    width: 17.03vw;
+    height: 7.77vh;
+    top: 0%;
+    right: 0%;
+    background: #FFD700;
+    border-radius: 48px 0px 0px 48px;
+  }
+
+.iconLoc {
+    width: 1.62vw;
+    height: 4.02vh;
+    position: absolute;
+    right: 9.17%;
+    top : 21.4%;
+  }
+
+  .textMerah{
+    font-family: Helvetica Neue;
+    color: #F22D45;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 14px;
+    position :absolute;
+    top : 25%;
+    right: 22.47%;
+}
+
+  .textKonten{
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #053F5E;
+    position :absolute;
+    line-height: 18px;
+    top : 45.39%;
+    right: 21%;
+}
+
+.logoHome {
+    width: 26.56vw;
+    height: 13.05vh;
+    display: block;
+    position: absolute;
+    top : 20.97%;
+    left : 20.54%;
+  }
+
+.quickStart{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  position : absolute;
+  width: 23.59vw;
+  height: 5,55vh;
+  top : 38.81%;
+  left: 23.54%;
+}
+
+.posisiPengu{
+  position: absolute;
+  width: 50.07vw;
+  height: 12.66vh;
+  left: 0%;
+  bottom: 0%;
+  background: #FDCE3F;
+}
+
+  @media screen and (min-width: 1900px) {
+    .textMerah {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    .textKonten {
+        font-size: 22px;
+        line-height: 27px;
+      }
+    .quickStart{
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+  }

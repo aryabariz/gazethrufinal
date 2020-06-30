@@ -1,0 +1,142 @@
+.posterSlider{
+    width: 31.56vw;
+    height: 79.44vh;
+    display: block;
+}
+
+.penguSlider{
+    width: 46.32vw;
+    height: 5vh;
+    color : #053F5E;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.gmbrAgenda{
+    position:absolute;
+    width:19.86vw;
+    height: 50vh;
+}
+
+.zonaSAgenda{
+    width: 50vw;
+    height: 50vh;
+    background: #fdce3f;
+    position: absolute;
+    top: 7.74%;
+    left: 25%;
+}
+
+.labelAgenda{
+    font-family: Helvetica Neue;
+    color: #4a4a4a;
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0px;
+}
+
+.locJAgenda{
+    position: relative;
+    left: 40.93%;
+    top: 20px;
+
+}
+
+.batasText{
+    margin-top: 14px;
+}
+
+.judulAgenda{
+    position:relative;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 31.5px;
+    line-height: 39px;
+    height: 7.36vh;
+    width : 26.40vw;
+    color: #000000;
+    margin-top: 0px;
+}
+
+.spacer{
+    margin-top: 20px;
+}
+
+.fontTextAgenda{
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+    width: 26.4vw;
+}
+.waktuTempat{
+    font-weight: 500;
+    height: 79.5px;
+}
+
+.ketAgenda{
+    font-weight: normal;
+    height: 198px; 
+}
+
+.gmbrKonten{
+    position:relative;
+    width : 33.33vw;
+    height: 33.33vh;
+    display : block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.judulKonten{
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 31.5px;
+    line-height: 39px;
+    height: 3.61vh;
+    width : 33.33vw;
+    color: #000000;
+    margin-left:30px;
+    margin-bottom: 0px;
+    
+}
+
+.textArtikel{
+    height: 7.77vh;
+    margin-left:30px;
+    color: #000;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: auto;
+}
+
+.ketKonten{
+    width: 33.33vw;
+    height: 11.11vh;
+    position: relative;
+    margin-bottom: 0px;
+    
+}
+    
+
+@media screen and (min-width: 1900px) {
+    .labelAgenda{
+        font-size: 15px;
+    }
+    
+    .locJAgenda{
+        top: 30px;
+    }
+
+    .batasText{
+       margin-top: 20px;
+    }
+    .spacer{
+        margin-top: 30px;
+    }
+    
+  }
