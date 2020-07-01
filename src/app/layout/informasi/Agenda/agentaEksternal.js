@@ -11,7 +11,7 @@ export default function agendaEksternal(){
 
         <div class="bawah">
            
-           <AgendaSlider/>
+           <AgendaSlider tipe="2"/>
         
         </div>
 

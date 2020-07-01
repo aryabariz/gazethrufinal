@@ -36,6 +36,7 @@ export default class agendaSlider extends Component{
     render(){
 
     var{datas}= this.state;    
+    var tipe = this.props.tipe;
     const settings ={
         dots: false,
         infinite: true,
@@ -54,10 +55,10 @@ export default class agendaSlider extends Component{
             <div class="zonaSAgenda">
                   
                   <Slider {...settings}>
-                        {datas.filter(filterAgenda => filterAgenda.agenda_type === (this.props.tipe)).map(Agenda =>(
+                        {datas.filter(filterAgenda => filterAgenda.agenda_type === {tipe}).map(Agenda =>(
                     <div key={Agenda.id}>
                      <div class="gmbrAgenda"  > 
-                     <img  class="ui fluid image" src={Agenda.image_agenda} alt="poster"/>
+                     <img  class="ui fluid image" src={Agenda.agenda_photo} alt="poster"/>
                      </div>
                      <p class="labelAgenda locJAgenda batasText">Judul Agenda</p>
                     <p class="judulAgenda locJAgenda">{Agenda.agenda_name}</p>
