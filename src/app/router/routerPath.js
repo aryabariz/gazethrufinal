@@ -4,7 +4,7 @@ import routerBeranda from './routerBeranda';
 import routerMenuPeta from './peta/routerMenuPeta';
 import routerMenuInformasi from './informasi/routerMenuInformasi';
 import Agenda from '../layout/informasi/Tentang/halTentang';
-import testpage from '../layout/informasi/Prestasi/prestasiNasional'
+import testpage from '../layout/informasi/Prestasi/prestasiInternasional'
 
 function routerPath(){
     return(     
