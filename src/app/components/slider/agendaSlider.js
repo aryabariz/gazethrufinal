@@ -18,7 +18,7 @@ export default class agendaSlider extends Component{
         apiurl.get('/agenda')
         .then(response => {
             this.setState({
-                    datas: response.data,
+                    datas: response.data.filter(filterAgenda => filterAgenda.agenda_type===this.props.tipe),
               })
         }).catch(error => {
             console.log(error);
@@ -31,6 +31,7 @@ export default class agendaSlider extends Component{
         //         datas: json,
         //     })
         // })
+        console.log(this.props.tipe)
     }
 
 
@@ -57,7 +58,7 @@ export default class agendaSlider extends Component{
             <div class="zonaSAgenda">
                   
                   <Slider {...settings}>
-                        {datas.filter(filterAgenda => filterAgenda.agenda_type.includes('this.props.tipe')).map(Agenda =>(
+                        {datas.map(Agenda =>(
                     <div key={Agenda.id}>
                      <div class="gmbrAgenda"  > 
                      <img  class="ui fluid image" src={Agenda.agenda_photo} alt="poster"/>
