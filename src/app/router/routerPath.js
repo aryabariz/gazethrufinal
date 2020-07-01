@@ -13,7 +13,7 @@ function routerPath(){
                 <Route exact path="/menuPeta" component={routerMenuPeta}/>
                 <Route exact path="/menuInformasi" component={routerMenuInformasi}/>
                 <Route exact path="/menuInformasi/agenda/internal" component={Agenda}/>
-                <Route exact path="/testpage" component={routerMenuInformasi}/>
+                <Route exact path="/testpage" component={testpage}/>
             </Switch>
         );
 }
