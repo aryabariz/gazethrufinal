@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import MenuInformasi from '../../layout/informasi/menuInformasi';
 import {Redirect} from 'react-router-dom';
 import Websocket from '../../components/websocket';
+import PrestasInternasional from '../../layout/informasi/Prestasi/prestasiInternasional'
 
 
-export default class routerMenuInformasi extends Component{
+export default class routerPrestasiInternasional extends Component{
     constructor(props){
         super(props);
         this.state={
@@ -34,28 +34,22 @@ export default class routerMenuInformasi extends Component{
 
 
     render(){
-        var {klikBtn1, klikBtn2, klikBtn3, klikBtn4} = this.state;
+        var {klikBtn1, klikBtn3} = this.state;
         
         if(klikBtn1>=0.7){
-            return <Redirect to="/" />;
-        }
-
-        else if(klikBtn2>=0.7){
             return <Redirect to="/menuInformasi/prestasi" />;
         }
 
         else if(klikBtn3>=0.7){
-            return <Redirect to="/menuInformasi/agenda" />;
+            return <Redirect to="/" />;
         }
 
-        else if(klikBtn4>=0.7){
-            return <Redirect to="/menuInformasi/tentang" />;
-        }
+        
         
         else {
             return( 
                 <div>
-            <MenuInformasi/>
+            <PrestasInternasional/>
             <Websocket klikBtn1= {this.stateBtn1} klikBtn2= {this.stateBtn2} klikBtn3= {this.stateBtn3} klikBtn4= {this.stateBtn4}/>
             </div>
             )

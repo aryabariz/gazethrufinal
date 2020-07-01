@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import MenuInformasi from '../../layout/informasi/menuInformasi';
 import {Redirect} from 'react-router-dom';
-import Websocket from '../../components/websocket';
+import Websocket from '../../../components/websocket';
+import DenahLantaiSatu from '../../../layout/peta/lantaiSatu/denahLantaiSatu';
 
-
-export default class routerMenuInformasi extends Component{
+export default class routeDenahLantaiSatu extends Component{
     constructor(props){
         super(props);
         this.state={
@@ -37,28 +36,29 @@ export default class routerMenuInformasi extends Component{
         var {klikBtn1, klikBtn2, klikBtn3, klikBtn4} = this.state;
         
         if(klikBtn1>=0.7){
-            return <Redirect to="/" />;
+            return <Redirect to="/menuPeta" />;
         }
 
         else if(klikBtn2>=0.7){
-            return <Redirect to="/menuInformasi/prestasi" />;
+            return <Redirect to="/menuPeta/denahlantaisatu" />;
         }
 
         else if(klikBtn3>=0.7){
-            return <Redirect to="/menuInformasi/agenda" />;
+            return <Redirect to="/menuPeta/denahlantaisatu/selatan" />;
         }
 
         else if(klikBtn4>=0.7){
-            return <Redirect to="/menuInformasi/tentang" />;
+            return <Redirect to="/menuPeta/denahlantaisatu/utara" />;
         }
         
         else {
             return( 
                 <div>
-            <MenuInformasi/>
+            <DenahLantaiSatu/>
             <Websocket klikBtn1= {this.stateBtn1} klikBtn2= {this.stateBtn2} klikBtn3= {this.stateBtn3} klikBtn4= {this.stateBtn4}/>
             </div>
             )
         }
     }   
 }
+

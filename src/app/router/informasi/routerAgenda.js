@@ -1,48 +1,60 @@
 import React, {Component} from 'react';
-import MenuInformasi from '../../layout/informasi/menuInformasi';
 import {Redirect} from 'react-router-dom';
+import Websocket from '../../components/websocket';
+import HalAgenda from '../../layout/informasi/Agenda/halAgenda'
 
 
-class routerAgenda extends Component{
+export default class routerAgenda extends Component{
     constructor(props){
         super(props);
         this.state={
-            klikBtn1: false,
-            klikBtn2: false,
-            klikBtn3: false,
-            klikBtn4: false,
+            klikBtn1: 0,
+            klikBtn2: 0,
+            klikBtn3: 0,
+            klikBtn4: 0,
 
         }
     }
 
-    componentDidMount(){
-        
+    stateBtn1 = (btn1) =>{
+        this.setState({klikBtn1 : btn1})
+    }
+
+    stateBtn2 =(btn2) =>{
+        this.setState({klikBtn2 : btn2})
+    }
+
+    stateBtn3 = (btn3) =>{
+        this.setState({klikBtn3 : btn3})
+    }
+
+    stateBtn4 =(btn4) =>{
+        this.setState({klikBtn4 : btn4})
     }
 
 
     render(){
-        var {klikBtn1, klikBtn2, klikBtn3, klikBtn4} = this.state;
+        var {klikBtn1, klikBtn3, klikBtn4} = this.state;
         
-        if(klikBtn1===true){
-            return <Redirect to="/" />;
+        if(klikBtn1>=0.7){
+            return <Redirect to="/menuInformasi" />;
         }
 
-        else if(klikBtn2===true){
-            return <Redirect to="/TestValu" />;
+        else if(klikBtn3>=0.7){
+            return <Redirect to="/menuInformasi/agenda/eksternal" />;
         }
 
-        else if(klikBtn3===true){
-            return <Redirect to="/" />;
-        }
-
-        else if(klikBtn4===true){
-            return <Redirect to="/" />;
+        else if(klikBtn4>=0.7){
+            return <Redirect to="/menuInformasi/agenda/internal" />;
         }
         
         else {
-            return <MenuInformasi/>
+            return( 
+                <div>
+            <HalAgenda/>
+            <Websocket klikBtn1= {this.stateBtn1} klikBtn2= {this.stateBtn2} klikBtn3= {this.stateBtn3} klikBtn4= {this.stateBtn4}/>
+            </div>
+            )
         }
     }   
 }
-
-export default routerAgenda;

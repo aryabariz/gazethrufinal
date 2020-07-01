@@ -9,8 +9,8 @@ class routerMenuPeta extends Component{
         this.state={
             klikBtn1: 0,
             klikBtn2: 0,
-            klikBtn3: [],
-            klikBtn4: [],
+            klikBtn3: 0,
+            klikBtn4: 0,
 
         }
     }
@@ -39,16 +39,16 @@ class routerMenuPeta extends Component{
             return <Redirect to="/" />;
         }
 
-        else if(klikBtn2>=0.8){
-            return <Redirect to="/xxxxx" />;
+        else if(klikBtn2>=0.7){
+            return <Redirect to="/menuPeta/denahlantaidua" />;
         }
 
-        else if(klikBtn3>=0.8){
-            return <Redirect to="/xxxx" />;
+        else if(klikBtn3>=0.7){
+            return <Redirect to="/menuPeta/denahlantaisatu" />;
         }
 
-        else if(klikBtn4>=0.8){
-            return <Redirect to="/xxxx" />;
+        else if(klikBtn4>=0.7){
+            return <Redirect to="/menuPeta/denahlantaitiga" />;
         }
         
         else {
