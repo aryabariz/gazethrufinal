@@ -2,6 +2,7 @@
     width: 31.56vw;
     height: 79.44vh;
     display: block;
+    object-fit: fill;
 }
 
 .penguSlider{
