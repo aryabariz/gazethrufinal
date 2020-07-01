@@ -53,7 +53,7 @@ class posterSlider extends Component{
                 <Slider {...settings}>
                 {posters.map(poster =>(
                 <div key={poster.id}>
-                    <img  class="ui fluid image" src={poster.poster_file} alt="poster"/>                 
+                    <img  class="stretchImg" src={poster.poster_file} alt="poster"/>                 
                 </div>
                 ))}
                 </Slider>

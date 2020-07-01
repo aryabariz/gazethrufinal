@@ -5,6 +5,10 @@
     object-fit: fill;
 }
 
+.strechImg{
+    width: 31.56vw;
+    height: 79.44vh
+}
 .penguSlider{
     width: 46.32vw;
     height: 5vh;
