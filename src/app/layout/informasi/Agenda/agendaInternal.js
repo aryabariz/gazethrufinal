@@ -11,7 +11,7 @@ export default function agendaInternal(){
 
         <div class="bawah">
            
-           <AgendaSlider/>
+           <AgendaSlider tipe="1"/>
         
         </div>
 
