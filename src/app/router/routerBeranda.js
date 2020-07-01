@@ -35,11 +35,11 @@ class routerBeranda extends Component{
         var {klikBtn1, klikBtn2} = this.state;
         
         
-        if(klikBtn1>=0.8){
+        if(klikBtn1>=0.7){
             return <Redirect to="/menuInformasi" />;
         }
 
-        else if(klikBtn2>=0.8){
+        else if(klikBtn2>=0.7){
             return <Redirect to="/menuPeta" />;
         }
         

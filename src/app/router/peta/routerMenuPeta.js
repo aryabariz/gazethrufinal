@@ -35,7 +35,7 @@ class routerMenuPeta extends Component{
     render(){
         var {klikBtn1, klikBtn2, klikBtn3, klikBtn4} = this.state;
         
-        if(klikBtn1>=0.8){
+        if(klikBtn1>=0.7){
             return <Redirect to="/" />;
         }
 

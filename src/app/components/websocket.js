@@ -149,6 +149,7 @@ componentWillUnmount(){
     ws.close();
     ws.onclose = () =>{    
         clearInterval(this.interval1, this.interval2);
+        window.location.reload(true);
         
     }
 }
