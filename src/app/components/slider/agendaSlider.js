@@ -56,7 +56,7 @@ export default class agendaSlider extends Component{
             <div class="zonaSAgenda">
                   
                   <Slider {...settings}>
-                        {datas.filter(filterAgenda => filterAgenda.agenda_type === this.state.tipe).map(Agenda =>(
+                        {datas.filter(filterAgenda => filterAgenda.agenda_type.includes(this.props.tipe)).map(Agenda =>(
                     <div key={Agenda.id}>
                      <div class="gmbrAgenda"  > 
                      <img  class="ui fluid image" src={Agenda.agenda_photo} alt="poster"/>
