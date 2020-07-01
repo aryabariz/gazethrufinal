@@ -14,7 +14,7 @@ class posterSlider extends Component{
 
     componentDidMount() {
 
-        apiurl.get('/Poster')
+        apiurl.get('/poster')
         .then(response => {
             this.setState({
                     posters: response.data,
@@ -53,7 +53,7 @@ class posterSlider extends Component{
                 <Slider {...settings}>
                 {posters.map(poster =>(
                 <div key={poster.id}>
-                    <img  class="ui fluid image" src={poster.image} alt="poster"/>                 
+                    <img  class="ui fluid image" src={poster.poster} alt="poster"/>                 
                 </div>
                 ))}
                 </Slider>
