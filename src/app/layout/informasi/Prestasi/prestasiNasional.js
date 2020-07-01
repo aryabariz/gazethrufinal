@@ -1,6 +1,6 @@
 import React from 'react';
 import '.././informasi.css';
-import Atasan from '../../../components/atasan';
+import Atasan from '../../../components/atasanHome';
 import PrestasiSlider from '../../../components/slider/prestasiSlider'
 
 

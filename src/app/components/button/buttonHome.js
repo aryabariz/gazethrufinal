@@ -21,7 +21,7 @@ function buttonHome (props) {
         }}
         id="buttonSatu"
         >
-           <Button className="dasarButton" color="red">
+           <Button className="dasarButton" color="orange">
            <p class="fontButton">Beranda</p>
            </Button>
         </motion.div>

@@ -32,3 +32,41 @@
     bottom: 21.6%;
     right: 11.87%;
 }
+
+.locBUtara{
+    position:absolute;
+    bottom: 26.96%;
+    right: 6.56%;
+}
+
+.locBSelatan{
+    position:absolute;
+    top: 6.64%;
+    left: 6.56%;
+}
+
+.gmbrDenah{
+    width: 50vw;
+    height: 31.94vh;
+    position: absolute;
+    background : white;
+    left:  25%;
+    top: 6.64%;
+}
+
+.ketSelatan{
+    width: 24.21vw;
+    height: 15.52vh;
+    position: absolute;
+    left: 25%;
+    bottom : 26.96%;
+    background:#FDCE3F; 
+}
+.ketUtara{
+    width: 24.21vw;
+    height: 15.52vh;
+    position: absolute;
+    right: 25%;
+    bottom : 26.96%;
+    background:#FDCE3F; 
+}

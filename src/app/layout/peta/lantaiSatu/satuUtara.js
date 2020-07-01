@@ -1,13 +1,13 @@
 import React from 'react';
 import '../peta.css';
-import Atasan from '../../../components/atasan';
+import AtasanHome from '../../../components/atasanHome';
 import LantaiSlider from '../../../components/slider/peta/lantaiSlider'
 
 
 export default function satuUtara(){
     return(     
         <div>
-        <Atasan/>
+        <AtasanHome/>
 
         <div class="bawah">
            

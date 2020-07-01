@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import Websocket from '../../components/websocket';
-import AgendaEksternal from '../../layout/informasi/Agenda/agendaEksternal'
+import AgendaEksternal from '../../layout/informasi/Agenda/agentaEksternal'
 
 
 export default class routerAgendaEksternal extends Component{
