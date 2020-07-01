@@ -15,7 +15,7 @@ export default class agendaSlider extends Component{
 
     componentDidMount() {
 
-        apiurl.get('/Poster')
+        apiurl.get('/agenda')
         .then(response => {
             this.setState({
                     datas: response.data,
@@ -60,11 +60,11 @@ export default class agendaSlider extends Component{
                      <img  class="ui fluid image" src={Agenda.image_agenda} alt="poster"/>
                      </div>
                      <p class="labelAgenda locJAgenda batasText">Judul Agenda</p>
-                    <p class="judulAgenda locJAgenda">{Agenda.nama_agenda}</p>
+                    <p class="judulAgenda locJAgenda">{Agenda.agenda_name}</p>
                     <p class="labelAgenda locJAgenda spacer">Waktu & Tempat</p>
-                    <p class="fontTextAgenda waktuTempat locJAgenda">{Agenda.nama_agenda} <br></br> {Agenda.tanggal_agenda}<br></br> {Agenda.jam_agenda} </p>
+                    <p class="fontTextAgenda waktuTempat locJAgenda">{Agenda.agenda_place} <br></br> {Agenda.date}<br></br> {Agenda.time} </p>
                     <p class="labelAgenda locJAgenda spacer">Keterangan</p>
-                    <p class="fontTextAgenda ketAgenda locJAgenda">{Agenda.nama_agenda}</p>
+                    <p class="fontTextAgenda ketAgenda locJAgenda">{Agenda.agenda_detail}</p>
                     </div>
                      
                     
