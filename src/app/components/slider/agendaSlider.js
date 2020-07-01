@@ -10,6 +10,7 @@ export default class agendaSlider extends Component{
         super(props);
         this.state={
             datas : [],
+            filtered :[],
         }
     }
 
@@ -18,7 +19,7 @@ export default class agendaSlider extends Component{
         apiurl.get('/agenda')
         .then(response => {
             this.setState({
-                    datas: response.data.filter(filterAgenda => filterAgenda.agenda_type===this.props.tipe),
+                    datas: response.data,
               })
         }).catch(error => {
             console.log(error);
@@ -58,7 +59,7 @@ export default class agendaSlider extends Component{
             <div class="zonaSAgenda">
                   
                   <Slider {...settings}>
-                        {datas.map(Agenda =>(
+                        {datas.filter(filterAgenda => filterAgenda.agenda_type===this.props.tipe).map(Agenda =>(
                     <div key={Agenda.id}>
                      <div class="gmbrAgenda"  > 
                      <img  class="ui fluid image" src={Agenda.agenda_photo} alt="poster"/>
