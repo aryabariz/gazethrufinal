@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick';
 import './sliderStyle.css';
-import apiurl from '../../api';
+import apiurl from '../api';
 
 
 export default class kontenSlider extends Component {
