@@ -11,7 +11,7 @@ export default function prestasiNasional(){
 
         <div class="bawah">
            
-           <KontenSlider url="https://5edf40429ed06d001696cf4a.mockapi.io/agenda"/>
+           <KontenSlider/>
         
         </div>
 

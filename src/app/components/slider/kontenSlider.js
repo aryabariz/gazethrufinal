@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick';
 import './sliderStyle.css';
+import apiurl from '../api';
+
 
 export default class kontenSlider extends Component {
     constructor(props){
@@ -10,13 +12,22 @@ export default class kontenSlider extends Component {
         }
     }
     componentDidMount() {
-        fetch(this.props.url)
-        .then(res => res.json())
-        .then(json => {
+        apiurl.get('/Poster')
+        .then(response => {
             this.setState({
-                datas: json,
-            })
-        })
+                    datas: response.data,
+              })
+        }).catch(error => {
+            console.log(error);
+          });
+
+        // fetch(this.props.url)
+        // .then(res => res.json())
+        // .then(json => {
+        //     this.setState({
+        //         datas: json,
+        //     })
+        // })
     }
 
 

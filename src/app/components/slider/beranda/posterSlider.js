@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../sliderStyle.css';
 import Slider from 'react-slick';
+import apiurl from '../../api';
 
 class posterSlider extends Component{
 
@@ -12,13 +13,24 @@ class posterSlider extends Component{
     }
 
     componentDidMount() {
-        fetch('https://5edf40429ed06d001696cf4a.mockapi.io/Poster')
-        .then(res => res.json())
-        .then(json => {
+
+        apiurl.get('/Poster')
+        .then(response => {
             this.setState({
-                posters: json,
-            })
-        })
+                    posters: response.data,
+              })
+        }).catch(error => {
+            console.log(error);
+          });
+
+
+        // fetch('https://5edf40429ed06d001696cf4a.mockapi.io/Poster')
+        // .then(res => res.json())
+        // .then(json => {
+        //     this.setState({
+        //         posters: json,
+        //     })
+        // })
     }
 
     render(){

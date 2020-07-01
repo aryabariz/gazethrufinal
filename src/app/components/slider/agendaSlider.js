@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick';
 import './sliderStyle.css';
-
+import apiurl from '../api';
 
 
 
@@ -14,13 +14,22 @@ export default class agendaSlider extends Component{
     }
 
     componentDidMount() {
-        fetch('https://5edf40429ed06d001696cf4a.mockapi.io/agenda')
-        .then(res => res.json())
-        .then(json => {
+
+        apiurl.get('/Poster')
+        .then(response => {
             this.setState({
-                datas: json,
-            })
-        })
+                    datas: response.data,
+              })
+        }).catch(error => {
+            console.log(error);
+          });
+        // fetch('https://5edf40429ed06d001696cf4a.mockapi.io/agenda')
+        // .then(res => res.json())
+        // .then(json => {
+        //     this.setState({
+        //         datas: json,
+        //     })
+        // })
     }
 
 
