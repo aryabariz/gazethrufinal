@@ -1,7 +1,7 @@
 import React from 'react';
 import '../peta.css';
 import Atasan from '../../../components/atasan';
-import KontenSlider from '../../../components/slider/kontenSlider'
+import LantaiSlider from '../../../components/slider/peta/lantaiSlider'
 
 
 export default function tigaSelatan(){
@@ -11,7 +11,7 @@ export default function tigaSelatan(){
 
         <div class="bawah">
            
-           <KontenSlider/>
+        <LantaiSlider lantai="tiga" lokasi="selatan"/>
         
         </div>
 

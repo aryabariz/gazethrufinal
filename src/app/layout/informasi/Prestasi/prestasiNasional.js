@@ -1,7 +1,7 @@
 import React from 'react';
 import '.././informasi.css';
 import Atasan from '../../../components/atasan';
-import KontenSlider from '../../../components/slider/kontenSlider'
+import PrestasiSlider from '../../../components/slider/prestasiSlider'
 
 
 export default function prestasiNasional(){
@@ -11,7 +11,7 @@ export default function prestasiNasional(){
 
         <div class="bawah">
            
-           <KontenSlider/>
+           <PrestasiSlider tipe="nasional"/>
         
         </div>
 

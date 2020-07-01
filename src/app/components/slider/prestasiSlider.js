@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick';
 import './sliderStyle.css';
-import apiurl from '../api';
+import apiurl from '../../api';
 
 
 export default class kontenSlider extends Component {
@@ -12,7 +12,7 @@ export default class kontenSlider extends Component {
         }
     }
     componentDidMount() {
-        apiurl.get('/Poster')
+        apiurl.get('/prestasi')
         .then(response => {
             this.setState({
                     datas: response.data,
@@ -52,14 +52,14 @@ export default class kontenSlider extends Component {
             <div class="zonaSAgenda">
                   
                   <Slider {...settings}>
-                        {datas.map(konten =>(
-                    <div key={konten.id}>
+                        {datas.filter(filterAgenda => filterAgenda.prestasi_type===this.props.tipe).map(prestasi =>(
+                    <div key={prestasi.id}>
                      <div class="gmbrKonten"  > 
-                     <img  class="ui fluid image" src={konten.props.image} alt="poster"/>
+                     <img  class="ui fluid image" src={prestasi.prestasi_photo} alt="poster"/>
                      </div>
                      <div class="ketKonten">
-                     <p class="judulKonten">{konten.props.judul}</p>
-                     <p class="textArtikel">{konten.props.text}</p>
+                     <p class="judulKonten">{prestasi.prestasi_name}</p>
+                     <p class="textArtikel">{prestasi.prestasi_detail}</p>
                      </div>
                     </div>
                      

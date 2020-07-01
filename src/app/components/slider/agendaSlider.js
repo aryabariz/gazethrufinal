@@ -32,7 +32,6 @@ export default class agendaSlider extends Component{
         //         datas: json,
         //     })
         // })
-        console.log(this.props.tipe)
     }
 
 
@@ -57,7 +56,6 @@ export default class agendaSlider extends Component{
     return(
         
             <div class="zonaSAgenda">
-                  
                   <Slider {...settings}>
                         {datas.filter(filterAgenda => filterAgenda.agenda_type===this.props.tipe).map(Agenda =>(
                     <div key={Agenda.id}>
