@@ -55,11 +55,11 @@ export default class kontenSlider extends Component {
                         {datas.map(konten =>(
                     <div key={konten.id}>
                      <div class="gmbrKonten"  > 
-                     <img  class="ui fluid image" src={konten.image_agenda} alt="poster"/>
+                     <img  class="ui fluid image" src={konten.props.image} alt="poster"/>
                      </div>
                      <div class="ketKonten">
-                     <p class="judulKonten">{konten.nama_agenda}</p>
-                     <p class="textArtikel">{konten.nama_agenda}</p>
+                     <p class="judulKonten">{konten.props.judul}</p>
+                     <p class="textArtikel">{konten.props.text}</p>
                      </div>
                     </div>
                      
