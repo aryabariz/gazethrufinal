@@ -23,6 +23,7 @@ export default class agendaSlider extends Component{
         }).catch(error => {
             console.log(error);
           });
+
         // fetch('https://5edf40429ed06d001696cf4a.mockapi.io/agenda')
         // .then(res => res.json())
         // .then(json => {
@@ -35,8 +36,9 @@ export default class agendaSlider extends Component{
 
     render(){
 
-    var{datas}= this.state;    
-    var tipe = this.props.tipe;
+    var{datas}= this.state;
+    console.log(this.props.tipe)    
+    
     //console.log(tipe)
     const settings ={
         dots: false,
