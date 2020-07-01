@@ -1,43 +1,55 @@
 import React, {Component} from 'react';
 import Beranda from '../layout/beranda';
 import {Redirect} from 'react-router-dom';
+import Websocket from '../components/websocket';
 
 
 class routerBeranda extends Component{
     constructor(props){
         super(props);
         this.state={
-
+            klikBtn1:[],
+            klikBtn2:[],
+            
         }
     }
 
-    componentDidMount(){
+
+    stateBtn1 = (btn1) =>{
+        this.setState({klikBtn1 : btn1})
     }
 
+    stateBtn2 =(btn2) =>{
+        this.setState({klikBtn2 : btn2})
+    }
+
+    stateBtn3 = (btn3) =>{
+        this.setState({klikBtn3 : btn3})
+    }
+
+    stateBtn4 =(btn4) =>{
+        this.setState({klikBtn4 : btn4})
+    }
 
     render(){
-        var {klikBtn2, klikBtn3, klikBtn4} = this.state;
+        var {klikBtn1, klikBtn2} = this.state;
         
-        if(this.state.corBtn1 === 1){
+        
+        if(klikBtn1>=0.8){
             return <Redirect to="/menuInformasi" />;
         }
 
-        else if(klikBtn2===true){
+        else if(klikBtn2>=0.8){
             return <Redirect to="/menuPeta" />;
         }
-
-        else if(klikBtn3===true){
-            return <Redirect to="/" />;
-        }
-
-        else if(klikBtn4===true){
-            return <Redirect to="/" />;
-        }
         
-        else {
-            return (<Beranda/>
-                )
-
+        else{
+            return(
+                <div>
+                 <Beranda/>
+                 <Websocket klikBtn1= {this.stateBtn1} klikBtn2= {this.stateBtn2} klikBtn3= {this.stateBtn3} klikBtn4= {this.stateBtn4}/>
+                 </div>
+            );
         }
     }   
 }

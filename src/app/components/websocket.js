@@ -1,23 +1,26 @@
 import React, {Component} from 'react';
 
 
+ 
+
 class app extends Component{
 
     constructor(props){
         super(props);
         this.state={
-            xbtn1 : [],
-            ybtn1 : [],
-            xbtn2 : [],
-            ybtn2 : [],
-            xbtn3 : [],
-            ybtn3 : [],
-            xbtn4 : [],
-            ybtn4 : [],
+            xbtn1 : 0,
+            ybtn1 : 0,
+            xbtn2 : 0,
+            ybtn2 : 0,
+            xbtn3 : 0,
+            ybtn3 : 0,
+            xbtn4 : 0,
+            ybtn4 : 0,
             corBtn1 : [],
             corBtn2 : [],
             corBtn3 : [],
             corBtn4 : [],
+            ws: null,
             
         }
     }
@@ -26,8 +29,8 @@ class app extends Component{
     
     componentDidMount() {
 
-
-    this.connect();
+    
+     this.connect();
     //Mengirim posisi button melalui websocket saat koneksi terbuka
     
 
@@ -37,7 +40,7 @@ class app extends Component{
       const styleButtonTiga = window.getComputedStyle(document.getElementById("buttonTiga"));
       const styleButtonEmpat = window.getComputedStyle(document.getElementById("buttonEmpat"));
       //Menyimpan nilai kedalam array dan mengganti nilainya sesuai interval yang ditentukan
-      const interval = setInterval(()=>{
+      this.interval2 = setInterval(()=>{
           
           try{
               this.setState({
@@ -71,23 +74,23 @@ class app extends Component{
               
           }catch (error){
               }
-              
       }, 100);
       
-      return()=>clearInterval(interval);  
+      //return()=>clearInterval(interval);  
 
 }
 connect = () => {
+        
         //handshake kepada websocket
-        var ws = new WebSocket("ws://192.168.43.129:8000/gazethru");
-
+         const ws = new WebSocket("ws://192.168.43.228:8000/gazethru");
         //cek koneksi terbuka
         ws.onopen =() =>{
             console.log('connect to django server') //muncul diconsole sebagai penanda telah terkoneksi  
-        
-            const interval = setInterval(() => {      
+            this.setState({ ws: ws });
+            this.interval1 = setInterval(() => {      
                 try{
                   var koordinatButton = JSON.stringify({
+                    id : 1,
                     x_btn_right : this.state.xbtn1,
                     y_btn_right : this.state.ybtn1,
                     x_btn_left : this.state.xbtn2,
@@ -96,41 +99,79 @@ connect = () => {
                     y_btn_down : this.state.ybtn3,
                     x_btn_up : this.state.xbtn4,
                     y_btn_up : this.state.ybtn4,
-                    id : 1,
+                    
                                     
                   })
                   ws.send(koordinatButton)          
                 }catch (error) {
-                    console.log(error)
+                    
                     } 
-              }, 1000); 
-              return()=>clearInterval(interval); 
+              }, 100); 
+              //return()=>clearInterval(interval); 
         }
 
         ws.onmessage = (evt) =>{
             const message = JSON.parse(evt.data)
             this.setState({
-                corBtn1 : message.corBtn1,
-                corBtn2 : message.buttonId,
-                corBtn3 : message.buttonId,
-                corBtn4 : message.buttonId,             
+                corBtn1 : message.corr_right,
+                corBtn2 : message.corr_left,
+                corBtn3 : message.corr_up,
+                corBtn4 : message.corr_down,             
             })
-            console.log(this.state.data)
+            console.log(this.state.corBtn1)
+            console.log(this.state.corBtn2)
+            try{
+            this.props.klikBtn1(this.state.corBtn1);
+            }catch(error){
+            }
+            try{
+            this.props.klikBtn2(this.state.corBtn2);
+            }catch(error){
+            }
+            try{
+            this.props.klikBtn3(this.state.corBtn3);
+            }catch(error){
+            }
+            try{
+            this.props.klikBtn4(this.state.corBtn4);
+            }catch(error){
+            }
+        }
+
+        ws.onclose = () =>{
+            console.log('closed')
         }
 
 }
+
+componentWillUnmount(){
+    const { ws } = this.state;
+    ws.close();
+    ws.onclose = () =>{    
+        clearInterval(this.interval1, this.interval2);
+        
+    }
+}
+
+
+reload = () => 
+{
+    //RELOAD COMPONENT
+    
+};
+
 
 
 
 
     render(){
+        
         return(
             <div class="body">
             <div id="buttonSatu"/>
             <div id="buttonDua"/>
             <div id="buttonTiga"/>
             <div id="buttonEmpat"/>
-            <p>nilai korel : {this.state.corBtn1}</p>
             </div>
         );
     }
