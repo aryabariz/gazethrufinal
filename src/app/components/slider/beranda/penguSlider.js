@@ -13,7 +13,7 @@ export default class penguSlider extends Component{
       }
   
     componentDidMount() {
-        apiurl.get('/Poster')
+        apiurl.get('/pengumuman')
         .then(response => {
             this.setState({
                     Pdatas: response.data,
@@ -59,7 +59,7 @@ export default class penguSlider extends Component{
                 <Slider {...settings}>
                 {Pdatas.map(Pdata =>(
                     <p key={Pdata.id}>
-                        {Pdata.pengumuman}
+                        {Pdata.pengumuman_text}
                          </p>                                    
                 ))}
                 </Slider>
