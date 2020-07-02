@@ -3,7 +3,7 @@ import '../peta.css';
 import Atasan from '../../../components/atasan';
 import ButtonAtas from '../../../components/button/buttonVerNeg';
 import ButtonBawah from '../../../components/button/buttonVerPos';
-
+import gmbrlt2  from '../../../assets/gmbrLnt2.jpeg'
 
 export default function denahLantaiDua(){
     return(     
@@ -12,7 +12,7 @@ export default function denahLantaiDua(){
 
         <div class="bawah">
            <div class="gmbrDenah">
-                <img class="ui fluid image" alt="gmbrdenah"/>
+                <img class="ui fluid image" src={gmbrlt2} alt="gmbrdenah"/>
            </div>
             <div class="ketSelatan">
 
