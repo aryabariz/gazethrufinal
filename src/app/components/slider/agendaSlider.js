@@ -14,7 +14,7 @@ export default class agendaSlider extends Component{
         }
     }
 
-    componentDidMount() {
+    async componentDidMount() {
 
         apiurl.get('/agenda')
         .then(response => {

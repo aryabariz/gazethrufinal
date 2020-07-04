@@ -19,7 +19,7 @@ function buttonHome (props) {
             yoyo : Infinity,
             duration: 5, 
         }}
-        id="buttonSatu"
+        id="buttonDua"
         >
            <Button className="dasarButton" color="orange">
            <p class="fontButton">Beranda</p>

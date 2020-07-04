@@ -36,15 +36,15 @@ export default class routerAgenda extends Component{
     render(){
         var {klikBtn1, klikBtn3, klikBtn4} = this.state;
         
-        if(klikBtn1>=0.7){
+        if(klikBtn1>=0.45){
             return <Redirect to="/menuInformasi" />;
         }
 
-        else if(klikBtn3>=0.7){
+        else if(klikBtn3>=0.45){
             return <Redirect to="/menuInformasi/agenda/eksternal" />;
         }
 
-        else if(klikBtn4>=0.7){
+        else if(klikBtn4>=0.45){
             return <Redirect to="/menuInformasi/agenda/internal" />;
         }
         

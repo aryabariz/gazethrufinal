@@ -12,7 +12,7 @@ export default class penguSlider extends Component{
         }
       }
   
-    componentDidMount() {
+    async componentDidMount() {
         apiurl.get('/pengumuman')
         .then(response => {
             this.setState({
@@ -42,7 +42,7 @@ export default class penguSlider extends Component{
             slidesToScroll: 1, 
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 20000,
+            autoplaySpeed: 5000,
 
             
 

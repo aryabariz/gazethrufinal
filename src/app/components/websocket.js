@@ -40,7 +40,7 @@ class app extends Component{
       const styleButtonTiga = window.getComputedStyle(document.getElementById("buttonTiga"));
       const styleButtonEmpat = window.getComputedStyle(document.getElementById("buttonEmpat"));
       //Menyimpan nilai kedalam array dan mengganti nilainya sesuai interval yang ditentukan
-      this.interval2 = setInterval(()=>{
+      this.interval1 = setInterval(()=>{
           
           try{
               this.setState({
@@ -74,10 +74,9 @@ class app extends Component{
               
           }catch (error){
               }
+              
       }, 100);
-      
-      //return()=>clearInterval(interval);  
-
+      //return()=>clearInterval(interval); 
 }
 connect = () => {
         
@@ -87,7 +86,7 @@ connect = () => {
         ws.onopen =() =>{
             console.log('connect to django server') //muncul diconsole sebagai penanda telah terkoneksi  
             this.setState({ ws: ws });
-            this.interval1 = setInterval(() => {      
+             this.interval2 = setInterval(() => {      
                 try{
                   var koordinatButton = JSON.stringify({
                     id : 1,
@@ -108,18 +107,16 @@ connect = () => {
                     } 
               }, 100); 
               //return()=>clearInterval(interval); 
-        }
+        };
 
         ws.onmessage = (evt) =>{
             const message = JSON.parse(evt.data)
             this.setState({
                 corBtn1 : message.corr_right,
                 corBtn2 : message.corr_left,
-                corBtn3 : message.corr_up,
-                corBtn4 : message.corr_down,             
+                corBtn3 : message.corr_down,
+                corBtn4 : message.corr_up,             
             })
-            console.log(this.state.corBtn1)
-            console.log(this.state.corBtn2)
             try{
             this.props.klikBtn1(this.state.corBtn1);
             }catch(error){
@@ -139,7 +136,6 @@ connect = () => {
         }
 
         ws.onclose = () =>{
-            console.log('closed')
         }
 
 }
@@ -151,15 +147,10 @@ componentWillUnmount(){
         clearInterval(this.interval1, this.interval2);
         window.location.reload(true);
         
+        
     }
 }
 
-
-reload = () => 
-{
-    //RELOAD COMPONENT
-    
-};
 
 
 

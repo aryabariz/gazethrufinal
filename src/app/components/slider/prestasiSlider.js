@@ -11,7 +11,7 @@ export default class kontenSlider extends Component {
             datas : [],
         }
     }
-    componentDidMount() {
+    async componentDidMount() {
         apiurl.get('/prestasi')
         .then(response => {
             this.setState({

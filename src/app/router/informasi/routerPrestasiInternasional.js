@@ -34,13 +34,13 @@ export default class routerPrestasiInternasional extends Component{
 
 
     render(){
-        var {klikBtn1, klikBtn3} = this.state;
+        var {klikBtn1, klikBtn2} = this.state;
         
-        if(klikBtn1>=0.7){
+        if(klikBtn1>=0.45){
             return <Redirect to="/menuInformasi/prestasi" />;
         }
 
-        else if(klikBtn3>=0.7){
+        else if(klikBtn2>=0.45){
             return <Redirect to="/" />;
         }
 

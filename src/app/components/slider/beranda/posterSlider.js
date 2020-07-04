@@ -12,7 +12,7 @@ class posterSlider extends Component{
         }
     }
 
-    componentDidMount() {
+    async componentDidMount() {
 
         apiurl.get('/poster')
         .then(response => {
@@ -43,7 +43,7 @@ class posterSlider extends Component{
             slidesToScroll: 1, 
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 20000,
+            autoplaySpeed: 1000,
             fade: true, 
 
         }

@@ -35,11 +35,11 @@ export default class routeSatuSelatan extends Component{
     render(){
         var {klikBtn1, klikBtn2} = this.state;
         
-        if(klikBtn1>=0.7){
+        if(klikBtn1>=0.45){
             return <Redirect to="/menuPeta/denahlantaisatu" />;
         }
 
-        else if(klikBtn2>=0.7){
+        else if(klikBtn2>=0.45){
             return <Redirect to="/" />;
         }
 

@@ -35,19 +35,15 @@ export default class routeDenahLantaiTiga extends Component{
     render(){
         var {klikBtn1, klikBtn2, klikBtn3, klikBtn4} = this.state;
         
-        if(klikBtn1>=0.7){
+        if(klikBtn1>=0.45){
             return <Redirect to="/menuPeta" />;
         }
 
-        else if(klikBtn2>=0.7){
-            return <Redirect to="/menuPeta/denahlantaitiga" />;
-        }
-
-        else if(klikBtn3>=0.7){
+        else if(klikBtn3>=0.45){
             return <Redirect to="/menuPeta/denahlantaitiga/selatan" />;
         }
 
-        else if(klikBtn4>=0.7){
+        else if(klikBtn4>=0.6){
             return <Redirect to="/menuPeta/denahlantaitiga/utara" />;
         }
         

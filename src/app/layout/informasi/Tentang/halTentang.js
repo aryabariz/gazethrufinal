@@ -1,5 +1,5 @@
 import React from 'react';
-import videotentang from '../../../assets/GmbrPrestasi.png';
+import videotentang from '../../../assets/gedungteti.jpg';
 import '../informasi.css';
 import Atasan from '../../../components/atasan';
 import ButtonAtas from '../../../components/button/buttonVerNeg';
@@ -24,9 +24,8 @@ export default function halTentang(){
         </div>
             
         <div class="areaKeterangan">
-                <p class="judulKeterangan">Informasi</p>
-                <p class="isiKeterangan"> Visi % Misi DTETI : <br></br>
-                                          xxxxx  </p>
+                <p class="judulKeterangan">Visi & Misi DTETI :</p>
+                <p class="isiKeterangan"> Sumber inovasi yang universal di Bidang Ilmu Teknik Elektro & Teknologi Informasi.</p>
             </div>
             
         </div>

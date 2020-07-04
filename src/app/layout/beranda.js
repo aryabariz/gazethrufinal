@@ -5,6 +5,7 @@ import Pengumuman from '../components/slider/beranda/penguSlider';
 import ButtonKanan from '../components/button/buttonHorPos';
 import ButtonKiri from '../components/button/buttonHorNeg';
 import IconLog from '../assets/IconLoc.png';
+import {Link} from 'react-router-dom';
 import './beranda.css';
 
 export default function beranda(){
@@ -39,7 +40,11 @@ export default function beranda(){
                 </div>
 
                 <div class="lokasiBPeta">
+                <Link to="/menuPeta">
                 <ButtonKiri label="Peta" class="lokasiBPeta"/>
+                </Link>
+               
+
                 </div>
 
                 <div class="posisiPengu">
